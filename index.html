@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://momentjs.com/downloads/moment.js" charset="utf-8"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header>
+        <h1>Gennaio 2018</h1>
+        <div class="next_prev_chs">
+          <div class="prev">&lt;- Precedente</div>
+          <div class="next">Successivo -&gt;</div>
+        </div>
+      </header>
+
+      <ul id="day_list">
+
+      </ul>
+    </div>
+
+    <script id="day_template" type="text/x-handlebars-template">
+      <li class="day_wrtn" data-yyyymmdd="{{fullDate}}"> {{day}} {{month}} <span class="holiday_wrtn"></span></li>
+    </script>
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
