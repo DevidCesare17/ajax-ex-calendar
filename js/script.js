@@ -7,13 +7,33 @@ $(document).ready(function(){
   allCalendar(formatDate, month);
   tempCalendar(formatDate);
 
+  var prevMonth = $("div.prev");
+  prevMonth.click(
+    function() {
+      if (month > 0) {
+        month -= 1;
+        formatDate.subtract(1, "month");
+        allCalendar(formatDate, month);
+        tempCalendar(formatDate);
+        console.log(month);
+      } else {
+        alert("Ehi, non tornare più indietro di così!");
+      }
+    }
+  );
+
   var nextMonth = $("div.next");
   nextMonth.click(
     function() {
-      month += 1;
-      allCalendar(formatDate, month);
-      tempCalendar(formatDate);
-      console.log(month);
+      if (month < 11) {
+        month += 1;
+        formatDate.add(1, "month");
+        allCalendar(formatDate, month);
+        tempCalendar(formatDate);
+        console.log(month);
+      } else {
+        alert("Il 2018 è finito!");
+      }
     }
   );
 
