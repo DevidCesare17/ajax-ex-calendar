@@ -13,8 +13,12 @@
   justify-content: center;
   margin: 30px 0;
 }
-.prev{
+div.prev{
   margin-right: 15px;
+  cursor: pointer;
+}
+div.next{
+  cursor: pointer;
 }
 
 .holiday{
